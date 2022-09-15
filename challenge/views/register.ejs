@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs'); %>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-8 text-center">
+
+            <div class="alert alert-warning mb-5" role="alert">
+                Warning: Registration of new researchers requires the referral code only held by overseers.
+            </div>
+
+            <h3>Researcher Registration</h3>
+            <form action="/register" method="POST">
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Username</span>
+                    <input class="form-control" type="text" placeholder="Username" name="user">
+                </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Password</span>
+                    <input class="form-control" type="password" placeholder="Password" name="pass">
+                </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Referral Token</span>
+                    <input class="form-control" type="password" placeholder="Token" name="token">
+                </div>
+                <button class="btn btn-light mt-3 float-end" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs'); %>

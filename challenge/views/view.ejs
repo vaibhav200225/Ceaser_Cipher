@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs'); %>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-8 text-center">
+
+            <h4>OOPArt information:</h4>
+            <h5>ACCESS LEVEL: <%= user.accessLevel %></h5>
+
+            <div class="card my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-start"><%= entry.name %></h5>
+                    <p class="card-text text-start">
+                        <%= entry.desc %>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                This page uses material from the Wikipedia article <a href="https://en.wikipedia.org/wiki/Out-of-place_artifact">"Out-of-place artifact"</a>, which is released under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share-Alike License 3.0</a>.
+            </h5>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs'); %>

@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs'); %>
+    <div class="row mt-5">
+        <div class="col text-center">
+            <%_ if (!locals.user) { _%>
+            <h3>Welcome.</h3>
+            <h4>ACCESS LEVEL: guest</h4>
+            <%_ } else { _%>
+            <h3>Welcome, <b><%= user.user %></b>.</h3>
+            <h4>ACCESS LEVEL: <%= user.accessLevel %></h4>
+            <%_ } _%>
+        </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-8 text-center">
+            <h4>Search OOPArtDB:</h4>
+            <form action="/search" method="POST">
+                <div class="input-group mt-3">
+                    <span class="input-group-text">🔎</span>
+                    <input class="form-control" type="text" placeholder="Search Query" name="query">
+                    <button class="btn btn-light" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs'); %>

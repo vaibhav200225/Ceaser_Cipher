@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs'); %>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-8 text-center">
+
+            <div class="alert alert-warning mb-5" role="warning">
+                Notice: The OOPArt Scanner is only intended for automatic reconnaissance of targets. Other uses are unauthorized. Do NOT use if you do not know what you are doing.
+            </div>
+
+            <h4>OOPArt Scanner:</h4>
+            <form action="/scan" method="POST">
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Link</span>
+                    <input class="form-control" type="text" placeholder="OOPArt Link" name="link">
+                    <button class="btn btn-light" type="submit">Scan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs'); %>
